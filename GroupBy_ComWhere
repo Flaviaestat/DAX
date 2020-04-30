@@ -1,0 +1,12 @@
+//FILTER funciona como um WHERE pois a query será aplicada a base filtrada
+
+
+EVALUATE
+SUMMARIZE (
+FILTER (
+Customers,
+Customers[Continent] = "Europe"
+),
+Customers[CustomerName],
+"SumOfSales", SUM ( Sales[SalesAmount] )
+)

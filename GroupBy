@@ -1,0 +1,12 @@
+//A tabela principal é Sales
+//A tabela leftouter é Customers, mas isso é expresso no modelo de dados
+//O groupBy é a coluna CustomerName da tabela Customers
+//SumOfSales é o alias
+//O somatório está sendo aplicado em Sales[SalesAmount]
+
+EVALUATE
+SUMMARIZE (
+Sales,
+Customers[CustomerName],
+"SumOfSales", SUM ( Sales[SalesAmount] )
+)

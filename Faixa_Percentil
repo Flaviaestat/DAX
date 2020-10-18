@@ -1,0 +1,9 @@
+OrdemGrandezaCidade = 
+VAR N = 4
+VAR Percentiles =
+    ADDCOLUMNS (
+        GENERATESERIES ( 1, N ),
+        "Percentile", PERCENTILE.INC ( ValorDescritoPorSuasDimensoes[Valor], [Value] / N )
+    )
+RETURN
+    "TAMANHO - " & MINX ( FILTER ( Percentiles, ValorDescritoPorSuasDimensoes[Valor] <= [Percentile] ), [Value] )

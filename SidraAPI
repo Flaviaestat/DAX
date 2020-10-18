@@ -1,0 +1,8 @@
+Ler o codigo abaixo em Obter Dados > Web
+
+Tabela 793  - populacao por cidade:
+http://api.sidra.ibge.gov.br/values/t/793/n6/all?formato=xml
+
+
+Para ver outras agregações:
+http://api.sidra.ibge.gov.br/home/ajuda

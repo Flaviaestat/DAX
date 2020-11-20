@@ -1,0 +1,13 @@
+VAR SalesCY = [Sales Amount]
+VAR SalesPY =
+    CALCULATE (
+        [Sales Amount],
+        SAMEPERIODLASTYEAR ( 'Date'[Date] )
+    )
+VAR Result =
+    IF (
+        NOT ISBLANK ( SalesCY ) && NOT ISBLANK ( SalesPY ),
+        DIVIDE ( SalesCY - SalesPY, SalesPY )
+    )
+RETURN
+    Result

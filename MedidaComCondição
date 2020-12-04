@@ -1,0 +1,8 @@
+Por exemplo, se você deseja criar uma medida que sempre calcule o total de vendas de 2015, 
+independentemente de qual ano seja selecionado em qualquer outro visual no Power BI, crie uma medida parecida com a seguinte amostra:
+
+Total Sales for 2015 = CALCULATE(SUM('Sales OrderDetails'[Total Price]), YEAR('Sales OrderDetails'[orderdate]) = 2015)
+
+Definindo um relacionamento que não está definido no esquema
+
+Sales by Ship Date = CALCULATE(Sales[TotalPrice], USERELATIONSHIP('Calendar'[Date], Sales[ShipDate]))

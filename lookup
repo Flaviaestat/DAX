@@ -1,0 +1,1 @@
+FlagComent_cashback = or(CONTAINSSTRING (msg_palavras[Mensagem],"cash back"),CONTAINSSTRING (msg_palavras[Mensagem],"cashback"))
